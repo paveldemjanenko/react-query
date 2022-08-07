@@ -20,5 +20,23 @@
       "name": "Wolverine",
       "alterEgo": "Logan"
     }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Chandler Bing"
+    },
+    {
+      "id": 2,
+      "name": "Joe Tribbiani"
+    },
+    {
+      "id": 3,
+      "name": "Rachel Green"
+    },
+    {
+      "id": 4,
+      "name": "Tom Cruze"
+    }
   ]
 }
