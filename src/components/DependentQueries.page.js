@@ -16,12 +16,24 @@ export const DependentQueriesPage = ({ email }) => {
   )
   const channelId = user?.data.channelId
 
-  useQuery(
+  const { data: courses } = useQuery(
     ['courses', channelId],
     () => fetchCoursesByChannelId(channelId),
     { enabled: !!channelId }
   )
 
-  return <div>Dependent Queries Page</div>
+  return (
+    <>
+      <div>Dependent Queries Page</div>
+      <h2>Courses</h2>
+      {courses?.data.courses.map((course) => {
+        return (
+          <div key={course}>
+            {course}
+          </div>
+        )
+      })}
+    </>
+  )
 }
 
