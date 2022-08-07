@@ -28,8 +28,16 @@ const addSuperHero = (hero) => {
 export const useAddSuperHeroeData = () => {
   const queryClient = useQueryClient()
   return useMutation(addSuperHero, {
-    onSuccess: () => {
-      queryClient.invalidateQueries('super-heroes')
+    onSuccess: (data) => {
+      // queryClient.invalidateQueries('super-heroes')
+
+      //oldQueryData is data from cache
+      queryClient.setQueriesData('super-heroes', (oldQueryData) => {
+        return {
+          ...oldQueryData,
+          data: [...oldQueryData.data, data.data]
+        }
+      })
     }
   })
 }
