@@ -24,6 +24,11 @@
       "name": "Flash",
       "alterEgo": "Barry Allen",
       "id": 5
+    },
+    {
+      "name": "Spiderman",
+      "alterEgo": "Peter Parker",
+      "id": 6
     }
   ],
   "friends": [
